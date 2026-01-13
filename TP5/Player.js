@@ -12,8 +12,9 @@ class player {
         this.regen = 0;
         this.lvl = 1;
         this.IsAttacking = false;
-        this.IsWalking = true;
-        this.IsDying = false;
+        this.IsWalking = false;
+        this.IsDying = true;
+        this.isDead = false;
 
         this.walkSpriteIndex = 0;
         this.walkSpriteNumber = 9;
@@ -32,14 +33,18 @@ class player {
     }
 
     update(updateData) {
-        this.positionX = updateData.positionX
-        this.positionY = updateData.positionY
-        this.HP = updateData.HP
-        this.attaque = updateData.attaque
-        this.cooldown = updateData.cooldown
-        this.vitesse = updateData.vitesse
-        this.regen = updateData.regen
-        this.lvl = updateData.lvl
+        this.positionX = updateData.positionX;
+        this.positionY = updateData.positionY;
+        this.HP = updateData.HP;
+        this.attaque = updateData.attaque;
+        this.cooldown = updateData.cooldown;
+        this.vitesse = updateData.vitesse;
+        this.regen = updateData.regen;
+        this.lvl = updateData.lvl;
+        this.IsWalking = updateData.IsWalking;
+        this.IsDying = updateData.IsDying;
+        this.IsAttacking = updateData.IsAttacking;
+        this.isDead = updateData.isDead
     }
     animate() {
         if (this.IsWalking) {
