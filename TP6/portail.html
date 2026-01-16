@@ -13,56 +13,27 @@
     <div class="container">
         <h1>Configuration</h1>
 
-        <form id="configForm">
+        <form>
             <div class="input-group">
                 <label for="pseudo">Pseudo du Joueur</label>
-                <input type="text" id="pseudo" placeholder="Ex: Alpha_Warrior" required>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Ex: Alpha_Warrior" required>
             </div>
 
             <div class="input-group">
-                <label for="sprite-select">Choisir un Sprite</label>
-                <select id="sprite-select" name="sprite">
-                    <option value="1.png">Sprite 1</option>
-                    <option value="2.png">Sprite 2</option>
-                    <option value="3.png">Sprite 3</option>
-                    <option value="4.png">Sprite 4</option>
-                    <option value="5.png">Sprite 5</option>
-                    <option value="6.png">Sprite 6</option>
-                    <option value="7.png">Sprite 7</option>
-                    <option value="8.png">Sprite 8</option>
-                    <option value="9.png">Sprite 9</option>
-                    <option value="10.png">Sprite 10</option>
-                    <option value="11.png">Sprite 11</option>
-                    <option value="12.png">Sprite 12</option>
-                    <option value="13.png">Sprite 13</option>
-                    <option value="14.png">Sprite 14</option>
-                    <option value="15.png">Sprite 15</option>
-                    <option value="16.png">Sprite 16</option>
-                    <option value="17.png">Sprite 17</option>
-                    <option value="18.png">Sprite 18</option>
-                    <option value="19.png">Sprite 19</option>
-                    <option value="20.png">Sprite 20</option>
-                    <option value="21.png">Sprite 21</option>
-                    <option value="22.png">Sprite 22</option>
-                    <option value="23.png">Sprite 23</option>
-                    <option value="24.png">Sprite 24</option>
-                    <option value="25.png">Sprite 25</option>
-                    <option value="26.png">Sprite 26</option>
-                    <option value="27.png">Sprite 27</option>
-                    <option value="28.png">Sprite 28</option>
-                    <option value="29.png">Sprite 29</option>
-                </select>
+                <label>Choisissez votre Skin :</label>
+                <div id="sprite" class="sprite-grid"></div>
+                <input type="hidden" id="selected-sprite" name="sprite" value="1.png">
             </div>
 
             <div class="input-group">
-                <label for="backend-url">URL du Backend</label>
-                <input type="url" id="backend-url" placeholder="https://api.monjeu.com/v1" required>
+                <label id="backend">URL du Backend</label>
+                <input type="text" id="url" placeholder="https://api.monjeu.com/v1" required>
             </div>
 
             <button type="submit" class="btn-submit">Enregistrer la Configuration</button>
         </form>
     </div>
-    <script src="script.js"></script>
+    <script src="portail.js"></script>
 </body>
 
 </html>

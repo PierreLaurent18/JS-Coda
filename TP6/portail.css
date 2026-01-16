@@ -83,3 +83,44 @@ select option {
     background: #d90429;
     transform: translateY(-2px);
 }
+
+/* Grille de sélection */
+.sprite-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes pour voir plus de skins */
+    gap: 10px;
+    margin: 15px 0;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Le conteneur doit avoir une taille pour exister */
+#sprite-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    background: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 8px;
+    min-height: 100px; /* Force l'affichage même si vide */
+}
+
+.sprite-item {
+    width: 50px;
+    height: 50px;
+    border: 2px solid transparent;
+    background-repeat: no-repeat;
+    background-position: center center; /* Centre le sprite */
+    background-size: contain; /* Ajuste l'image à la case */
+    cursor: pointer;
+    image-rendering: pixelated; /* Garde la netteté du pixel art */
+}
+
+.sprite-item.selected {
+    border-color: #ef233c;
+    background-color: rgba(239, 35, 60, 0.2);
+}
+
