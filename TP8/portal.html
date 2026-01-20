@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Personnage</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Configuration</h1>
+
+        <form>
+            <div class="input-group">
+                <label for="pseudo">Pseudo du Joueur</label>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Ex: Alpha_Warrior" required>
+            </div>
+
+            <div class="input-group">
+                <label>Choisissez votre Skin :</label>
+                <div id="sprite" class="sprite-grid"></div>
+                <input type="hidden" id="selected-sprite" name="sprite" value="1.png">
+            </div>
+
+            <div class="input-group">
+                <label id="backend">URL du Backend</label>
+                <input type="link" id="url" placeholder="https://api.monjeu.com/v1" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Enregistrer la Configuration</button>
+        </form>
+    </div>
+    <script src="portal.js"></script>
+</body>
+
+</html>
