@@ -1,0 +1,67 @@
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --text-color: #e94560;
+    --text-secondary: #ffffff;
+    --accent: #0f3460;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.server-config input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 200px;
+}
+
+.status-offline { color: gray; }
+.status-online { color: #4eff4e; }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--accent);
+}
+
+th { color: var(--text-color); }
+
+.stats-item {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.stats-item b { color: var(--text-color); }

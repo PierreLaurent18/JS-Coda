@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header>
+        <h1>Game Stats Dashboard</h1>
+        <div class="server-config">
+            <input type="text" id="serverAddress" placeholder="IP:PORT (ex: 127.0.0.1:8080)" value="http://127.0.0.1:8080">
+            <span id="statusIndicator" class="status-offline">● Offline</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="selection-section">
+            <label for="playerSelect">Choisir un joueur :</label>
+            <select id="playerSelect">
+                <option value="">-- Sélectionner --</option>
+            </select>
+        </section>
+
+        <div class="grid-container">
+            <section class="card stats-card">
+                <h2>Statistiques Individuelles</h2>
+                <div id="playerStatsDisplay">
+                    <p>Sélectionnez un joueur pour voir ses stats.</p>
+                </div>
+            </section>
+
+            <section class="card ranking-card">
+                <h2>Classement Général</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Joueur</th>
+                            <th>Kills</th>
+                            <th>Morts</th>
+                            <th>Ratio K/D</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingTableBody">
+                        </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
